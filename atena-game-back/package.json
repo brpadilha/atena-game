@@ -1,0 +1,37 @@
+{
+	"name": "atena-game-back",
+	"version": "0.1.0",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.13.2",
+		"socket.io": "^4.1.2"
+	},
+	"scripts": {
+		"lint": "eslint src --max-warnings=0",
+		"dev": "nodemon src/index.js",
+		"prepare": "husky install",
+		"test": "jest"
+	},
+	"lint-staged": {
+		"src/**/*": [
+			"yarn lint --fix",
+			"yarn test --findRelatedTests --bail"
+		]
+	},
+	"devDependencies": {
+		"eslint": "^7.30.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-node": "^4.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"husky": "^7.0.1",
+		"jest": "^27.0.5",
+		"lint-staged": "^11.0.0",
+		"nodemon": "^2.0.9",
+		"prettier": "^2.3.2"
+	}
+}
